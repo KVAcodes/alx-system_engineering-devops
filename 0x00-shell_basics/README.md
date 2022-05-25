@@ -8,4 +8,5 @@
 7 - Executable script to move betty from /tmp to /tmp/my_first_directory
 8 - Executable script to delete betty in /tmp/my_first_directory
 9 - Executable script to delete my_first_directory in /tmp
-10 - Executable script to
+10 - Executable script to change the directory to the previous one
+11 - Executable script to
