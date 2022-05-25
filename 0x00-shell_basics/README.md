@@ -13,4 +13,5 @@
 12 - Executable script to print the type of file /tmp/iamafile is
 13 - Executable script to create a symbolic link between __ls__ and bin/ls in the current working directory
 14 - Executable script to copy all the html files in the current working directory to the parent directory without overriding and already existing html files in the parent directory
-15 - Executable script
+15 - Executable script to move all the files starting with an uppercase letter to /tmp/u
+16 - Executable script to delete all the files ending with ~
