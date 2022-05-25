@@ -3,4 +3,5 @@
 2 - Executable script to change directory to home
 3 - Executable script to print a long list of files in the current working directory
 4 - Executable script to print a long list of files including hidden files
-5 -
+5 - Executable script to print a long list of files including hidden files and also showing the user and group IDs in numerical format
+6 - 
