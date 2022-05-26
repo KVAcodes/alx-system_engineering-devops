@@ -7,4 +7,6 @@
 6 -Executable script to add the execute permission to the owner and the groupowner of the file hello and read permission to others 
 7 -Executable script to add the execute permission to the owner, group owner and others of the file hello
 8 -Executable script to set the permissions of the file hello to no permissions to the owner, no permissions to the group owner and all the permissions to others (hacked)
-9 -Executable script to
+9 -Executable script to set the mode of the hello file to -rwxr-x-wx
+10 -Executable script to copy the file permissions a file olleh to another file hello
+11 -Executable script to
