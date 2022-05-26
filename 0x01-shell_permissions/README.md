@@ -9,4 +9,7 @@
 8 -Executable script to set the permissions of the file hello to no permissions to the owner, no permissions to the group owner and all the permissions to others (hacked)
 9 -Executable script to set the mode of the hello file to -rwxr-x-wx
 10 -Executable script to copy the file permissions a file olleh to another file hello
-11 -Executable script to
+11 -Executable script to add the execute permission to all the subdirectories the current directory for the owner, group owner and others
+12 -Executable script to create a directory my_dir that has the mode 751 in the working directory
+13 -Executable script to change the group owner of the file hello to school
+100 -Executable script to 
