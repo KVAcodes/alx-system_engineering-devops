@@ -12,4 +12,6 @@
 11 -Executable script to add the execute permission to all the subdirectories the current directory for the owner, group owner and others
 12 -Executable script to create a directory my_dir that has the mode 751 in the working directory
 13 -Executable script to change the group owner of the file hello to school
-100 -Executable script to 
+100 -Executable script to change the owner and group of all the files and directories of the working directory to vincent and staff respectively
+101 -Executable script to change the owner and group of the symlink _hello to vincent and staff respectively
+102 -Executable script to 
