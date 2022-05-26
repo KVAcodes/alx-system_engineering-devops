@@ -17,4 +17,4 @@
 16 - Executable script to delete all the files ending with ~
 17 - Executable script to create a tree of directories in the current working directory
 18 - Executable script to list all the files and directories of the current working directory showing the directories with front slash and each file/directory separated with a comma
-19 - Executable script
+19 - Executable script to create a magic file school.mgc that would be used with the file command to detect other school data files
