@@ -15,4 +15,7 @@
 14-Executable script that displays lines in /etc/passwd file containing the pattern "root"
 15-Executable script that displays the number of lines that contains the pattern "bin in the file /etc/passwd
 16-Executable script that displays lines containing pattern "root" and 3 lines after them in the file /etc/passwd
-17-
+17-Executable script that displays all the lines in the file /etc/passwd that do not contain the pattern "bin"
+18-Executable script that displays all the lines of the file /etc/ssh/sshd_config starting with a letter
+19-Executable script that replaces all characters A and c from input to Z and e respectively
+20
