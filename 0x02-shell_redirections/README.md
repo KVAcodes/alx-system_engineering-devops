@@ -14,4 +14,5 @@
 13-Executable script that takes a list of words as input and prints only words that appear exactly once
 14-Executable script that displays lines in /etc/passwd file containing the pattern "root"
 15-Executable script that displays the number of lines that contains the pattern "bin in the file /etc/passwd
-16-Executable script
+16-Executable script that displays lines containing pattern "root" and 3 lines after them in the file /etc/passwd
+17-
