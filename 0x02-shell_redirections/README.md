@@ -10,4 +10,6 @@
 9 -Executable script that duplicates the last line of the file iacta
 10-Executable script that deletes all the regular files(not the directories) with a .js extension that are present in the current directory and all its subfolders
 11-Executable script that counts the number of directories and sub-directories in the current working directory
-
+12-Executable script that displats the 10 newest files in the current directory
+13-Executable script that takes a list of words as input and prints only words that appear exactly once
+14-
