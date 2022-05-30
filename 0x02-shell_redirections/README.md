@@ -1,2 +1,3 @@
 0 -Executable script that prints Hello, World followed by a new line to the standard outpuy
-1 -Executable script that
+1 -Executable script that displays a confused smiley
+2 -Executable script 
