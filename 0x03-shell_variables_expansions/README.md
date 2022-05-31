@@ -9,4 +9,5 @@
 8 -Executable script that prints the result of the addition of 128 with the value stored in the environment variable TRUEKNOWLEDGE
 9 -Executable script that prints the result of POWER divided by DIVIDE
 10-Executable script that displays the result of BREATH to the power of LOVE
-11-Executable script
+11-Executable script that converts a number from base 2(BINARY) to base
+12-Executable script that
