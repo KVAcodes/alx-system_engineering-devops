@@ -10,4 +10,7 @@
 9 -Executable script that prints the result of POWER divided by DIVIDE
 10-Executable script that displays the result of BREATH to the power of LOVE
 11-Executable script that converts a number from base 2(BINARY) to base
-12-Executable script that
+12-Executable script that prints all the possible combinations of two letters except oo in lower cases and one combination per line and also being alpha ordered starting with aa
+13-Executable script that prints a number with two decimal places
+14-Executable script that converts a number from base 10 to base 16
+15-Executable script that
