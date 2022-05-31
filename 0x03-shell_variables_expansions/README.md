@@ -5,4 +5,5 @@
 4 -Executable script that lists the environment variables
 5 -Executable script that lists all local variables and environment variables, and functions
 6 -Executable script that creates a new local variable BEST with the value School
-7 -Executable script that
+7 -Executable script that creates a new global variable BEST with the value School
+8 -Executable script 
