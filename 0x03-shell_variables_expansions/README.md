@@ -2,4 +2,5 @@
 1 -Executable script that prints hello user where user is the actual current linux user
 2 -Executable script that adds /action to the variable PATH with /action being the last directory the shells looks for a program
 3 -Executable script that counts the number of directories in that variable PATH
-4 -Executable script
+4 -Executable script that lists the environment variables
+5 -
