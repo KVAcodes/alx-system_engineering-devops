@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PATH | cut -d : -f 1-9 --output-delimiter= "=" " | wc -w 
+echo $PATH | cut -d : -f 1-9 --output-delimiter=" " | wc -w 
