@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PATH | grep -o "/" | wc -l
+echo $PATH | cut -d : -f 1-9 --output-delimiter= "=" " | wc -w 
