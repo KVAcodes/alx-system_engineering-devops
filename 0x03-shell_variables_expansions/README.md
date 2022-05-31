@@ -4,4 +4,5 @@
 3 -Executable script that counts the number of directories in that variable PATH
 4 -Executable script that lists the environment variables
 5 -Executable script that lists all local variables and environment variables, and functions
-6 -Executable script
+6 -Executable script that creates a new local variable BEST with the value School
+7 -Executable script that
