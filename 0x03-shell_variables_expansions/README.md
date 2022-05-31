@@ -7,4 +7,6 @@
 6 -Executable script that creates a new local variable BEST with the value School
 7 -Executable script that creates a new global variable BEST with the value School
 8 -Executable script that prints the result of the addition of 128 with the value stored in the environment variable TRUEKNOWLEDGE
-9 -Executable script  
+9 -Executable script that prints the result of POWER divided by DIVIDE
+10-Executable script that displays the result of BREATH to the power of LOVE
+11-Executable script
