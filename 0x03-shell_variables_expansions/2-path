@@ -1,0 +1,2 @@
+#!/bin/bash
+VAR1 ="/action"; PATH="$PATH$VAR1"
