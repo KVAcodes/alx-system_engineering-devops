@@ -14,4 +14,5 @@
 13-Executable script that prints a number with two decimal places
 14-Executable script that converts a number from base 10 to base 16
 15-Executable script that encodes and decodes text using the rot13 encryption assuming ASCII
-16-Executable script
+16-Executable script that prints every other line from the input, starting with the first line
+17-Executable script that adds the two numbers stored in the environment variables WATER and STIR and prints theresult, WATER is in base water and STIR is in base stir also the result being in base bestchol
