@@ -1,1 +1,7 @@
-Repo for shell basics
+# DEVOPS!
+
+### AUTHOR :open_book:
+Kadiri Victor.
+
+## CONTENTS.
+#### []()
