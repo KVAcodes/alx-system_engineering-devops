@@ -18,11 +18,14 @@ Kadiri Victor.
 #### [3 - until_best_school](https://github.com/KVAcodes/alx-system_engineering-devops/blob/master/0x04-loops_conditions_and_parsing/3-until_best_school)
 #####	Write a Bash script that displays `Best School` 10 times using `until` loop.
 
-#### []()
-#####	
+#### [4 - if_9_say_hi](https://github.com/KVAcodes/alx-system_engineering-devops/blob/master/0x04-loops_conditions_and_parsing/4-if_9_say_hi)
+#####	Write a Bash script that displays `Best School` 10 times, but for the 9th iteration, displays `Best School` and then `Hi` on a new line.
 
-#### []()
-#####	
+#### [5 - 4_bad_luck_8_is_your_chance]()
+#####	Write a Bash script that loops from 1 to 10 and:
+* displays `bad luck` for the 4th loop iteration
+* displays `good luck` for the 8th loop iteration
+* displays `Best School` for the other iterations
 
 #### []()
 #####	
