@@ -4,7 +4,7 @@
 var=0
 while (( var < 13 ))
 do
-	echo "Hour : $var"
+	echo "Hour: $var"
 	var2=1
 	while (( var2 < 60 ))
 	do
