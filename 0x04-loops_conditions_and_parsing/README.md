@@ -56,5 +56,12 @@ Kadiri Victor.
 * In a list format
 
 ### ADVANCED
+#### [100 - read_and_cut]()
+#####	Write a Bash script that displays the content of the file `/etc/passwd`.
+Your script should only display:
+* username
+* user id
+* Home directory path for the user
+
 #### []()
-#####
+#####	
