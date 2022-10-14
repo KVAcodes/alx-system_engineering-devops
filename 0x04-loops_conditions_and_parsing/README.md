@@ -44,8 +44,8 @@ Kadiri Victor.
 * In a list format
 * Where only the part of the name after the first dash is displayed (refer to the example)
 
-#### []()
-#####	
+#### [9 - to_file_or_not_to_file]()
+#####	Write a Bash script that gives you information about the school file.
 
 #### []()
 #####	
