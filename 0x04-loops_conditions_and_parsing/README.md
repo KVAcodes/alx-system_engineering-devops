@@ -56,12 +56,19 @@ Kadiri Victor.
 * In a list format
 
 ### ADVANCED
-#### [100 - read_and_cut]()
+#### [100 - read_and_cut](https://github.com/KVAcodes/alx-system_engineering-devops/blob/master/0x04-loops_conditions_and_parsing/100-read_and_cut)
 #####	Write a Bash script that displays the content of the file `/etc/passwd`.
 Your script should only display:
 * username
 * user id
 * Home directory path for the user
 
-#### []()
+#### [101 - tell_the_story_of_passwd](https://github.com/KVAcodes/alx-system_engineering-devops/blob/master/0x04-loops_conditions_and_parsing/101-tell_the_story_of_passwd)
+#####	Write a Bash script that displays the content of the file `/etc/passwd`, using the `while` loop + IFS.
+Format: `The user USERNAME is part of the GROUP_ID gang, lives in HOME_DIRECTORY and rides COMMAND/SHELL. USER ID's place is protected by the passcode PASSWORD, more info about the user here: USER ID INFO`
+
+#### [](https://github.com/KVAcodes/alx-system_engineering-devops/blob/master/0x04-loops_conditions_and_parsing/102-lets_parse_apache_logs)
+#####	
+
+#### [](https://github.com/KVAcodes/alx-system_engineering-devops/blob/master/0x04-loops_conditions_and_parsing/103-dig_the-data)
 #####	
