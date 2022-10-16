@@ -20,8 +20,10 @@ Kadiri Victor.
 You cannot use `pgrep`
 The third line of your script must be `# shellcheck disable=SC2009` (for more info about ignoring `shellcheck` error [here](https://github.com/koalaman/shellcheck/wiki/Ignore))
 
-#### []()
-#####	
+#### [3 - show_your_bash_pid_made_easy]()
+#####	Write a Bash script that displays the PID, along with the process name, of processes whose name contain the word `bash`.
+
+* You cannot use `ps`
 
 #### []()
 #####	
