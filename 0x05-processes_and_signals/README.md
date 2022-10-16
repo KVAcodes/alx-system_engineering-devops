@@ -25,6 +25,18 @@ The third line of your script must be `# shellcheck disable=SC2009` (for more in
 
 * You cannot use `ps`
 
+#### [4 - to_infinity_and_beyond]()
+#####	Write a Bash script that displays `To infinity and beyond` indefinitely.	
+In between each iteration of the loop, add a `sleep 2`
+
 #### []()
 #####	
 
+#### []()
+#####	
+
+#### []()
+#####	
+
+#### []()
+#####	
