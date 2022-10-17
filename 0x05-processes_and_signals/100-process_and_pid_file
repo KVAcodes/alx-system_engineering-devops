@@ -13,6 +13,6 @@ do
 	echo "To infinity and beyond"
 	trap "echo \"I hate the kill command\"" term
 	trap "echo \"Y U no love me?!\"" int
-	trap "rm /var/run/myscript.pid &&
-	kill $(pgrep -f 100-process_and_pid_file)" 3 15
+	trap 'rm /var/run/myscript.pid &&
+	kill $(pgrep -f 100-process_and_pid_file)' 3 15
 done
