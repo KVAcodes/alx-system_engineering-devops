@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# pings an IP address passed as an argument
-ping -c5 $1 
