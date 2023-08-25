@@ -1,8 +1,7 @@
-# creates a file in the /tmp directory
-file { '/tmp/holberton':
-  ensure  => 'file',
-  mode    => '0744',
+# create a file in /tmp
+file { '/tmp/school':
   owner   => 'www-data',
   group   => 'www-data',
+  mode    => '0744',
   content => 'I love Puppet',
 }
