@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
+# This script uses ssh to connect to my server using the private
+# stored in the ~/.ssh/school
+
 ssh -i ~/.ssh/school ubuntu@61276-web-01
