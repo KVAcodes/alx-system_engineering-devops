@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # installs nginx and configures it on a remote server
 
-redirect_string="service_name _;\nrewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+redirect_string="rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
 apt-get -y update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 echo 'Hello World!' > /var/www/html/index.nginx-debian.html
-sed -i "s/service_name _;/$redirect_string/g" /etc/nginx/sites-available/default
+sed -i "/server_name _;/a $redirect_string/g" /etc/nginx/sites-available/default
 service nginx start
