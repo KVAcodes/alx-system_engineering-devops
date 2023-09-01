@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # Script that turns on an Apache Server
 
-sudo apt-get update > /dev/null
-sudo apt-get install apache2 > /dev/null
 service apache2 start
