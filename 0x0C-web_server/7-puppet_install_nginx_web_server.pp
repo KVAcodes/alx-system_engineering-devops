@@ -1,22 +1,20 @@
-# Installing and configuring an Nginx server using Puppet instead of Bash
-
-package { 'nginx' :
-  provider        => 'apt-get';
-  install_options => ['-y'];
-}
-exec { 'ufw allow \'Nginx HTTP\'':
-  provider => shell;
+# Puppet manifest to install nginx
+package { 'nginx':
+  ensure => installed,
 }
 
-file { '/var/www/html/index.nginx-debian.html':
-  ensure  => present;
-  content => 'Hello World!';
+file_line { 'aaaaa':
+  ensure => 'present',
+  path   => '/etc/nginx/sites-available/default',
+  after  => 'listen 80 default_server;',
+  line   => 'rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
 }
 
-exec { 'sed -i \'/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\' /etc/nginx/sites-available/default':
-  provider => shell;
+file { '/var/www/html/index.html':
+  content => 'Hello World!',
 }
 
-exec { 'service nginx start':
-  provider => shell;
+service { 'nginx':
+  ensure  => running,
+  require => Package['nginx'],
 }
