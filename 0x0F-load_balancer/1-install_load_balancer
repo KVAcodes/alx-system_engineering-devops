@@ -18,4 +18,5 @@ backend myBackEnd
         server 61276-web-02 52.87.220.207:80 check
 "
 echo "$haproxy_config" >> /etc/haproxy/haproxy.cfg
+sudo systemctl enable haproxy
 sudo service haproxy start
