@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This Script runs by using the root user to run a command as the user passed in as argument
+
+if [ "$1" ]
+then
+    sudo -u "$1" whoami
+else
+    whoami
+fi
