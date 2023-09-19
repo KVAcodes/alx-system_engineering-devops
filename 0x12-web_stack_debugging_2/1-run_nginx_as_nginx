@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configures a container to run nginx as "nginx" user
+
+sudo adduser nginx
+echo "user nginx;" >> /etc/nginx/nginx.conf
+sudo chown -R nginx:nginx /etc/nginx/
+sed -i 's/[Service]/a User=nginxuser/' /lib/systemd/system/nginx.service
+sed -i 's/listen [::]:80 default_server ipv6only=on;/a listen 0.0.0.0:8080;/ etc/nginx/sites-available/default
+sudo service nginx restart
