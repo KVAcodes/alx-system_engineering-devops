@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Configures a container to run nginx as "nginx" user
-sudo chown -R nginx:nginx /etc/nginx/
+chmod 644 /etc/nginx/nginx.conf
 echo "user nginx;" >> /etc/nginx/nginx.conf
 sed -i 's/listen \[::\]:80 default_server ipv6only=on;/&\n   listen 0.0.0.0:8080;/' etc/nginx/sites-enabled/default
 sudo pkill -9 apache2
