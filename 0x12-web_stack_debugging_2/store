@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-# Configures a container to run nginx as "nginx" user
-
-echo "user nginx;" >> /etc/nginx/nginx.conf
-sudo chown -R nginx:nginx /etc/nginx/
-sed -i '/\[Service\]/a User=nginx/' /lib/systemd/system/nginx.service
-sed -i 's/listen \[::\]:80 default_server ipv6only=on;/&\n   listen 0.0.0.0:8080;/' etc/nginx/sites-available/default
-sudo kill -9 37
-sudo service nginx restart
+# Fixes the issue with the server
+chmod 644 /etc/nginx/nginx.conf
+sed -Ei 's/\s*#?\s*user .*/user nginx;/' /etc/nginx/nginx.conf
+sed -Ei 's/(listen (\[::\]:)?80) /\180 /' /etc/nginx/sites-enabled/default
+pkill apache2
+su nginx -s /bin/bash -c 'service nginx restart'
