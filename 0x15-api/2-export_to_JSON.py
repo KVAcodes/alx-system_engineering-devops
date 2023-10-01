@@ -23,7 +23,7 @@ if __name__ == '__main__':
                 data = {
                     f"{id}": [{
                         "task": f"{todo['title']}",
-                        "completed": f"{todo['completed']}",
+                        "completed": todo['completed'],
                         "username": f"{user['username']}"
                         } for todo in todos]
                 }
