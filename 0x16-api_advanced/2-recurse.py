@@ -1,30 +1,40 @@
 #!/usr/bin/python3
-"""Function to query a list of all hot posts on a given Reddit subreddit."""
+"""This module contains a recursive function that queries the Reddit
+API and returns a list containing the titles of all hot articles for
+a given subreddit.
+"""
 import requests
 
 
 def recurse(subreddit, hot_list=[], after="", count=0):
-    """Returns a list of titles of all hot posts on a given subreddit."""
-    url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
-    headers = {
-        "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
-    }
+    """ a recursive function that queries the Reddit API and returns
+    a list containing the titles of all hot articles for a given subreddit
+    """
+    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     params = {
-        "after": after,
-        "count": count,
-        "limit": 100
+        'limit': 100,
+        'count': count
     }
-    response = requests.get(url, headers=headers, params=params,
+    if after:
+        params['after'] = after
+    curr_count = count + params['limit']
+    headers = {
+        'User-Agent': 'UbuntuFocal/1.0'
+    }
+
+    response = requests.get(url, params=params, headers=headers,
                             allow_redirects=False)
-    if response.status_code == 404:
+
+    if response.status_code == 200:
+        response_json = response.json()
+        hot_posts = response_json.get('data').get('children')
+        for hot_post in hot_posts:
+            hot_list.append(hot_post['data']['title'])
+    else:
         return None
 
-    results = response.json().get("data")
-    after = results.get("after")
-    count += results.get("dist")
-    for c in results.get("children"):
-        hot_list.append(c.get("data").get("title"))
+    after = response_json.get('data').get('after')
+    if after is None:
+        return hot_list
 
-    if after is not None:
-        return recurse(subreddit, hot_list, after, count)
-    return hot_list
+    return recurse(subreddit, hot_list=hot_list, after=after, count=curr_count)
