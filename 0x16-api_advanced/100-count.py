@@ -3,8 +3,8 @@
 parses the title of all hot articles and prints a sorted count of given
 keywords provided in a list.
 """
-import requests
 import re
+import requests
 
 
 def count_words(subreddit, word_list, keywords={}, after="", count=0):
@@ -63,4 +63,4 @@ def count_words(subreddit, word_list, keywords={}, after="", count=0):
         return
 
     return count_words(subreddit, word_list, keywords=keywords,
-                   after=after, count=curr_count)
+                       after=after, count=curr_count)
