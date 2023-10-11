@@ -1,55 +1,66 @@
-#!/usr/bin/python3
-"""Function to count words in all hot posts of a given Reddit subreddit."""
+#!/usr/bin/python3\
+"""This module contains a recursive function that querries the Reddit API,
+parses the title of all hot articles and prints a sorted count of given
+keywords provided in a list.
+"""
 import requests
+import re
 
 
-def count_words(subreddit, word_list, instances={}, after="", count=0):
-    """Prints counts of given words found in hot posts of a given subreddit.
-
-    Args:
-        subreddit (str): The subreddit to search.
-        word_list (list): The list of words to search for in post titles.
-        instances (obj): Key/value pairs of words/counts.
-        after (str): The parameter for the next page of the API results.
-        count (int): The parameter of results matched thus far.
+def count_words(subreddit, word_list, keywords={}, after="", count=0):
     """
-    url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
-    headers = {
-        "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
-    }
+    Queries Reddit API
+
+    recursively querries the Reddit API , parses the title of all hot articles,
+    and prints a sorted count of given keywords (case-insensitive, delimited by
+    spaces. Javascript should count as javascript, but java should not).
+
+    """
+    if not keywords:
+        keywords = {word: 0 for word in word_list}
+    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     params = {
-        "after": after,
-        "count": count,
-        "limit": 100
+        'limit': 100,
+        'count': count
     }
-    response = requests.get(url, headers=headers, params=params,
+    if after:
+        params['after'] = after
+    curr_count = count + params['limit']
+    headers = {
+        'User-Agent': 'UbuntuFocal/1.0'
+    }
+
+    response = requests.get(url, params=params, headers=headers,
                             allow_redirects=False)
-    try:
-        results = response.json()
-        if response.status_code == 404:
-            raise Exception
-    except Exception:
-        print("")
+
+    if response.status_code == 200:
+        response_json = response.json()
+        hot_posts = response_json.get('data').get('children')
+        for hot_post in hot_posts:
+            title = hot_post['data']['title']
+            for key in keywords:
+                pattern = r'\b{}\b'.format(re.escape(key))
+                no_of_matches = len(re.findall(pattern, title, re.IGNORECASE))
+                if no_of_matches:
+                    keywords[key] += no_of_matches
+    else:
+        return None
+
+    after = response_json.get('data').get('after')
+    if after is None:
+        unique = set([key.lower() for key in keywords.keys()])
+        merged_dict = {word: 0 for word in unique}
+        for key in keywords.keys():
+            merged_dict[key.lower()] += keywords[key]
+
+        sorted_dict = {
+            k: v for k, v in sorted(merged_dict.items(),
+                                    key=lambda item: (-item[1], item[0]))
+        }
+        for key, val in sorted_dict.items():
+            if val > 0:
+                print(key + ':', val)
         return
 
-    results = results.get("data")
-    after = results.get("after")
-    count += results.get("dist")
-    for c in results.get("children"):
-        title = c.get("data").get("title").lower().split()
-        for word in word_list:
-            if word.lower() in title:
-                times = len([t for t in title if t == word.lower()])
-                if instances.get(word) is None:
-                    instances[word] = times
-                else:
-                    instances[word] += times
-
-    if after is None:
-        if len(instances) == 0:
-            print("")
-            return
-        instances = sorted(instances.items(), key=lambda kv: (-kv[1], kv[0]))
-        [print("{}: {}".format(k, v)) for k, v in instances]
-    else:
-        count_words(subreddit, word_list, instances, after, count)
+    return count_words(subreddit, word_list, keywords=keywords,
+                   after=after, count=curr_count)
