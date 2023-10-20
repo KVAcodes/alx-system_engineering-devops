@@ -21,9 +21,9 @@ server {
     }
     # Configures Nginx proxy requests to /api
     # to a gunicorn runnin at port 5000
-    location /api/ {
+    location /api {
         include proxy_params;
-        proxy_pass http://127.0.0.1:5002/api/;
+        proxy_pass http://127.0.0.1:5002/api;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
     }
